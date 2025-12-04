@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Fantástica - Portal Oficial</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+        }
+
+        header {
+            background: #1d3557;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+        }
+
+        nav {
+            background: #457b9d;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        nav button {
+            background: #1d3557;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+
+        nav button:hover {
+            background: #0f253e;
+        }
+
+        section {
+            padding: 25px;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .time {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .patrocinadores img {
+            width: 150px;
+            margin: 10px;
+        }
+
+        footer {
+            background: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 25px;
+        }
+    </style>
+
+    <script>
+        function mostrar(secao) {
+            document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+            document.getElementById(secao).classList.add("active");
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    League Fantástica – Portal Oficial
+</header>
+
+<nav>
+    <button onclick="mostrar('home')">🏠 Home</button>
+    <button onclick="mostrar('jogo')">⚽ Jogo + Patrocinadores</button>
+    <button onclick="mostrar('formulario')">📝 Formulário</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <h2>Times Ficcionais</h2>
+
+    <div class="time">
+        <h3>1️⃣ Dragões do Norte</h3>
+        <p>Um time forte, tradicional e conhecido por sua defesa compacta.</p>
+        <strong>Jogadores:</strong>
+        <ul>
+            <li>Rafael “Chama” Costa</li>
+            <li>Igor Rocha</li>
+            <li>Lucas Ferraz</li>
+            <li>Thiago Magno</li>
+        </ul>
+    </div>
+
+    <div class="time">
+        <h3>2️⃣ Leões Imperiais</h3>
+        <p>Equipe técnica, habilidosa e famosa por passes precisos.</p>
+        <strong>Jogadores:</strong>
+        <ul>
+            <li>Eduardo “Rei” Silva</li>
+            <li>Marcelo Guarda</li>
+            <li>Bruno Rocha</li>
+            <li>Gustavo Cortez</li>
+        </ul>
+    </div>
+</section>
+
+<!-- JOGO + PATROCINADORES -->
+<section id="jogo">
+    <h2>Assista ao Jogo Oficial</h2>
+    <p>Clique abaixo para ver a partida completa entre Dragões do Norte e Leões Imperiais:</p>
+
+    <p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+           target="_blank" 
+           style="font-size:18px; font-weight:bold;">
+           ▶️ Assistir ao jogo no YouTube
+        </a>
+    </p>
+
+    <h3>Patrocinadores Oficiais</h3>
+    <div class="patrocinadores">
+        <img src="https://via.placeholder.com/150x80?text=Hyper+Sport" alt="Hyper Sport">
+        <img src="https://via.placeholder.com/150x80?text=Galaxy+Drink" alt="Galaxy Drink">
+        <img src="https://via.placeholder.com/150x80?text=Max+Energy" alt="Max Energy">
+    </div>
+</section>
+
+<!-- FORMULÁRIO (GOOGLE FORMS) -->
+<section id="formulario">
+    <h2>Votação: Melhor Jogador</h2>
+    <p>Responda diretamente no formulário abaixo:</p>
+
+    <!-- EMBED DO GOOGLE FORMS -->
+    <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLScdHie3rkXbGWU2MliwaOVnPzC1rMH8HP38N532IQQYXDfH5w/viewform?embedded=true" 
+        width="100%" 
+        height="900" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Carregando…
+    </iframe>
+</section>
+
+<footer>
+    © 2025 League Fantástica – Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
